@@ -107,9 +107,8 @@ class PythonOrgSearch(unittest.TestCase):
             # try:
             allData = {'MacthID':date_time_comment_timestamp,'api': dict_comment}
             query = {"MacthID":date_time_comment_timestamp}
-            print('Query = ', query)
             result = collections.find(query, {'_id': False})
-            print('Result = ', result.count())
+            print('result_count:', result.count())
             if result.count() == 0:
                 print('Not found. inserting')
                 print('All Data', allData)
